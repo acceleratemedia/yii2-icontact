@@ -1,0 +1,34 @@
+{
+    "name": "brianvb/yii2-icontact",
+    "description": "Uses iContact PHP API to communicate with servers. Creates database tables for holding references to iContact data and has commands to keep it in sync.",
+    "type": "yii2-extension",
+    "require": {
+        "brianvb/yii2-reporting": "@dev",
+        "brianvb/yii2-user": "@dev",
+        "brianvb/yii2-utilities": "@dev",
+        "yiisoft/yii2": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "BrianVB",
+            "email": "vanburen.brian@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "bvb\\icontact\\": "src",
+            "iContact\\": "iContact"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://repos.open-your-mind.info/"
+        }
+    ]
+}
