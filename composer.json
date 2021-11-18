@@ -1,5 +1,5 @@
 {
-    "name": "brianvb/yii2-icontact",
+    "name": "acceleratemedia/yii2-icontact",
     "description": "Uses iContact PHP API to communicate with servers. Creates database tables for holding references to iContact data and has commands to keep it in sync.",
     "type": "yii2-extension",
     "require": {
