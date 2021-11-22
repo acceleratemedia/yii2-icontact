@@ -3,9 +3,9 @@
     "description": "Uses iContact PHP API to communicate with servers. Creates database tables for holding references to iContact data and has commands to keep it in sync.",
     "type": "yii2-extension",
     "require": {
-        "brianvb/yii2-reporting": "@dev",
-        "brianvb/yii2-user": "@dev",
-        "brianvb/yii2-utilities": "@dev",
+        "acceleratemedia/yii2-reporting": "@dev",
+        "acceleratemedia/yii2-user": "@dev",
+        "acceleratemedia/yii2-utilities": "@dev",
         "yiisoft/yii2": "^2.0"
     },
     "authors": [
