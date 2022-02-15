@@ -83,6 +83,7 @@ class Contact extends \yii\db\ActiveRecord
                 );
                 $this->id = $contacts[0]->contactId;
             } catch(Exception $e){
+                \Yii::warning($e->getMessage());
                 foreach(ApiHelper::getSingleton()->getInstance()->getErrors() as $error){
                     $this->addError('id', $error);
                 }                
