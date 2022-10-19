@@ -172,6 +172,7 @@ class AddContact extends \yii\base\Widget
     {
         $eventName = self::JS_SUCCESS_EVENT;
         $emailInputId = $this->inputOptions['id'];
+        $emailAttributeId = Html::getInputId($this->getAddContactForm(), 'email');
         $addContactUrl = Url::to(['/'.$this->moduleId.'/'.$this->apiModuleId.'/v1/contacts/add', 'createModel' => $this->createModel, 'listId' => $this->listId]);
         $csrfParam = Yii::$app->request->csrfParam;
         $csrfToken = Yii::$app->request->csrfToken;
@@ -191,9 +192,9 @@ $("#{$formId}").on("beforeSubmit", function(e){
         .then(([responseOk, body])  => {
             if(!responseOk || !body.success){
                 if(body.message){
-                    $('#{$formId}').yiiActiveForm('updateAttribute', '{$emailInputId}', [body.message]);
+                    $('#{$formId}').yiiActiveForm('updateAttribute', '{$emailAttributeId}', [body.message]);
                 } else {
-                    $('#{$formId}').yiiActiveForm('updateAttribute', '{$emailInputId}', ["Unknown error"]);
+                    $('#{$formId}').yiiActiveForm('updateAttribute', '{$emailAttributeId}', ["Unknown error"]);
                 }
             } else {
                 document.getElementById('{$formId}-success-message').innerHTML = '{$this->successMessage}';
