@@ -29,7 +29,7 @@ class ApiModule extends Module
     public function beforeAction($action)
     {
         Yii::$app->request->parsers = ['application/json' => \yii\web\JsonParser::class];
-        Yii::$app->response->format = \yii\web\Respon1se::FORMAT_JSON;
+        Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
         if(
             !Yii::$app->request->getReferrer() ||
             Yii::$app->request->getUserIp() != Yii::$app->request->getRemoteIp()
